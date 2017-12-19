@@ -65,6 +65,11 @@ public class GetSchools {
 
 		if (!file.exists()) {
 			System.out.println(path + "\\" + xmlPath + " 不存在!");
+			try {
+				Thread.sleep(3000L);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			return false;
 		}
 
@@ -180,5 +185,7 @@ public class GetSchools {
 		String xmlPath = "schools.xls";
 
 		getSchools.getDomainAndUserName(xmlPath, a, b, c, d, column);
+
+
 	}
 }
